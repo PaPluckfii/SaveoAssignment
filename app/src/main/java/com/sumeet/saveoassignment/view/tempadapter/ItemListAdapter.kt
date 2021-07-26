@@ -9,6 +9,7 @@ import com.sumeet.saveoassignment.data.model.showlist.ShowListResponseItem
 
 class ItemListAdapter(
     private var listOfItems : List<ShowListResponseItem>,
+    private val itemListClickListener: ItemListClickListener
 ) : RecyclerView.Adapter<ItemListViewHolder>() {
 
     //private var responseList = arrayListOf<ResponseModel>()
@@ -16,7 +17,7 @@ class ItemListAdapter(
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemListViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.show_item_layout,parent,false)
-        return ItemListViewHolder(view)
+        return ItemListViewHolder(view,itemListClickListener)
     }
 
     override fun onBindViewHolder(holder: ItemListViewHolder, position: Int) {

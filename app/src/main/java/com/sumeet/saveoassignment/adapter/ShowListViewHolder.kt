@@ -6,6 +6,8 @@ import com.bumptech.glide.Glide
 import com.sumeet.saveoassignment.data.model.showlist.ShowListResponseItem
 import kotlinx.android.synthetic.main.show_item_layout.view.*
 
+/** Viewholder for paging adapter */
+
 class ShowListViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 
     fun setData(item : ShowListResponseItem){

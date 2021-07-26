@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/theme_blue"
     tools:context=".view.home.HomeScreenActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -32,6 +33,12 @@
 
     </androidx.appcompat.widget.Toolbar>
 
+    <ProgressBar
+        android:id="@+id/listProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -41,11 +48,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.yarolegovich.discretescrollview.DiscreteScrollView
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/horizontalScrollViewHome"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_200sdp"
-                android:orientation="horizontal"
                 android:layout_margin="@dimen/_5sdp"/>
 
             <androidx.recyclerview.widget.RecyclerView

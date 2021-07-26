@@ -8,12 +8,16 @@ import kotlinx.android.synthetic.main.show_item_layout.view.*
 
 class ItemListViewHolder(
     private val itemView : View,
+    private val itemListClickListener: ItemListClickListener
 ) : RecyclerView.ViewHolder(itemView) {
 
     fun setData(responseModelItem: ShowListResponseItem){
 
         Glide.with(itemView).load(responseModelItem.image?.medium).into(itemView.ivShowImage)
 
+        itemView.ivShowImage.setOnClickListener {
+            responseModelItem.id?.let { it1 -> itemListClickListener.onItemButtonClicked(it1) }
+        }
     }
 
 }

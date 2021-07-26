@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/_100sdp"
+    android:layout_width="@dimen/_250sdp"
     android:layout_height="@dimen/_150sdp"
-    android:layout_margin="@dimen/_10sdp"
-    android:elevation="@dimen/_5sdp">
+    android:elevation="@dimen/_5sdp"
+    android:layout_margin="@dimen/_10sdp">
 
     <ImageView
-        android:id="@+id/ivShowImage"
+        android:id="@+id/ivHorizontalItem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitCenter"/>
+        android:scaleType="fitXY"/>
 
 </androidx.cardview.widget.CardView>

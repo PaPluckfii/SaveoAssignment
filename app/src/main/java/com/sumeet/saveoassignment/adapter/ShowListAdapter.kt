@@ -6,6 +6,8 @@ import androidx.paging.PagingDataAdapter
 import com.sumeet.saveoassignment.R
 import com.sumeet.saveoassignment.data.model.showlist.ShowListResponseItem
 
+/** Adapter for paging 3 */
+
 class ShowListAdapter : PagingDataAdapter<ShowListResponseItem, ShowListViewHolder>(DiffUtilCallBack()) {
     override fun onBindViewHolder(holder: ShowListViewHolder, position: Int) {
         getItem(position)?.let { holder.setData(it) }
