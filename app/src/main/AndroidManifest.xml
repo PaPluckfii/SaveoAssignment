@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.sumeet.saveoassignment">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,13 +13,15 @@
         android:theme="@style/Theme.SaveoAssignment">
         <activity android:name=".view.splash.SplashScreenActivity"></activity>
         <activity android:name=".view.item.ShowItemActivity" />
-        <activity android:name=".view.home.HomeScreenActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".view.home.HomeScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
